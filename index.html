@@ -16,18 +16,16 @@
 
   <body>
 
-    <div class="page-wrapper">
+    <article class="centered">
 
-      <header>
-        <h1 class="brand">Where The Fuck Is My Car?</h1>
-        <h2>Helping irresponsible car owners in Chicago since 2015</h2>
-      </header>
+      <section class="top">
 
-      <article class="main-content">
+      <h1 class="brand">Where The Fuck Is My Car?</h1>
+      <h2 class="tagline">Helping irresponsible car owners in Chicago since 2015</h2>
 
-        <section>
-          <form class="searchform">
-            <input type="text" name="plate" placeholder="License Plate" />
+        <form class="searchform">
+          <input class="plate" name="plate" type="text" placeholder="Plate Number" />
+          <div class="state">
             <select name="state">
               <option value="AL">AL</option>
               <option value="AK">AK</option>
@@ -81,37 +79,32 @@
               <option value="WI">WI</option>
               <option value="WY">WY</option>
             </select>
-            <input type="submit" value="Search!" />
-          </form>
-        </section>
-
-        <section class="left">
-          <table class="searchresults">
-            <tr>
-              <th>Tow Date</th>
-              <th>Plate</th>
-              <th>State</th>
-              <th>Make</th>
-              <th>Color</th>
-              <th>Style</th>
-              <th></th>
-            </tr>
-          </table>
-        </section>
-
-        <section class="right">
-          <div class="resultdetail">
-          This should be hidden by default!
           </div>
-        </section>
+          <input class="submit" type="submit" value="Find My Car" />
+        </form>
+      </section>
 
-      </article>
+      <section class="left">
+        <table class="searchresults">
+          <tr>
+            <th>Tow Date</th>
+            <th>Plate</th>
+            <th>State</th>
+            <th>Make</th>
+            <th>Color</th>
+            <th>Style</th>
+            <th></th>
+          </tr>
+        </table>
+        <div class="notfound"><p>Even the City of Chicago doesn't know where the fuck your car is!</p></div>
+      </section>
 
-      <footer>
+      <section class="right">
+        <div class="resultdetail">
+        </div>
+      </section>
 
-      </footer>
-
-    </div>
+    </article>
 
   </body>
 

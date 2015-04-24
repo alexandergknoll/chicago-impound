@@ -3,13 +3,14 @@
 var chicagoImpoundApiURL = "https://data.cityofchicago.org/resource/ygr5-vcbg.json";
 
 $(function(){
-	var doc, newCell, searchResults, resultDetail, plateSearchForm;
+	var doc, newCell, searchResults, resultDetail, plateSearchForm, notFound;
 
 	doc = $(document);
 	newCell = $('<td>');
 	searchResults = $('.searchresults');
 	resultDetail = $('.resultdetail');
 	plateSearchForm = $('.searchform');
+	notFound = $('.notfound');
 
 	plateSearchForm.on('submit', carRequest);
 	doc.on('click','.resultlink', showInventory);
@@ -28,31 +29,26 @@ $(function(){
 		var towedToAddress = $(this).attr("towed_to_address");
 		var towFacilityPhone = $(this).attr("tow_facility_phone");
 
-		clearResultDetail();
+		resultDetail.text("");
 		appendResultDetail(inventoryNumber, towedToAddress, towFacilityPhone);
-		showResultDetail();
+		resultDetail.show();
 	}
 
 	function carResponse (cars) {
 		clearSearchResults();
-		showSearchResults();
-		cars.forEach(appendCarResult);
+		searchResults.hide();
+		notFound.hide();
+		resultDetail.hide();
+		if (cars.length > 0) {
+			cars.forEach(appendCarResult);
+			searchResults.show();
+		} else {
+			notFound.show();
+		}
 	}
 
 	function clearSearchResults () {
 		searchResults.find('.result').remove();
-	}
-
-	function clearResultDetail() {
-		resultDetail.text("");
-	}
-
-	function showSearchResults () {
-		searchResults.show();
-	}
-
-	function showResultDetail () {
-		resultDetail.show();
 	}
 
 	function appendCarResult (car) {
