@@ -9,8 +9,20 @@
     <link href="normalize.css" rel="stylesheet">
     <link href="chicago-impound.css" rel="stylesheet">
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="chicago-impound.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+
+    <!-- Google Maps API -->
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5nVwJIYqTz3X1a5ub4Ql0Y2a--Sv8m5A">
+    </script>
+    
+    <!-- Application JS -->
+    <script type="text/javascript"
+      src="chicago-impound.js">
+    </script>
 
   </head>
 
@@ -100,8 +112,8 @@
       </section>
 
       <section class="right">
-        <div class="resultdetail">
-        </div>
+        <div class="resultdetail"></div>
+        <div id="map-canvas"></div>
       </section>
 
     </article>
