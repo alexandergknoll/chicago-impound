@@ -54,13 +54,22 @@ $(function(){
 	}
 
 	function appendResultDetail (inventoryNumber, towedToAddress, towFacilityPhone) {
+		mapsURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + encodeURI(towedToAddress) + ",%20Chicago,%20IL&zoom=12&size=420x420&maptype=roadmap&markers=color:red%7Clabel:A%7C" + encodeURI(towedToAddress) + ",%20Chicago,%20IL&sensor=false"
+
 		resultDetail
+			.append($('<h3>')
+				.text("Found it!"))
 			.append($('<p>')
-				.text(inventoryNumber))
+				.text("Inventory Number: " + inventoryNumber))
 			.append($('<p>')
 				.text(towedToAddress))
 			.append($('<p>')
-				.text(towFacilityPhone));
+				.text(towFacilityPhone))
+			.append($('<img>')
+				.attr({
+					src: mapsURL
+				})
+			);
 	}
 
 	function htmlCarResult (car) {
