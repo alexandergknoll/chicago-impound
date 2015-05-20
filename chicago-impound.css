@@ -1,98 +1,101 @@
 body {
-	background:url(bg.jpg) top right no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
-	font-family:sans-serif;
+	background: url(bg.jpg) top right no-repeat;
+	background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	font-family: sans-serif;
 }
 
 .centered {
-  position:relative;
+  position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding:20px;
-  width:420px;
-  top:50%;
-  left:50%;
-  transform:translateX(-50%);
-  background-color:rgba(242, 242, 242, 0.9);
+  padding: 20px;
+  width: 420px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(242, 242, 242, 0.9);
 }
 
 .brand {
-	text-align:center;
-	font-size:2em;
-	font-weight:500;
-	margin:0;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 500;
+	margin: 0;
 }
 
 .tagline {
-	text-align:center;
-	font-size:1em;
-	font-weight:100;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 100;
 }
 
 .plate {
-	width:120px;
+	width: 120px;
 }
 
 .state {
-		display:inline;
-    overflow:hidden;
-    width:50px;
+		display: inline;
+    overflow: hidden;
+    width: 50px;
 }
 
 a {
-	color:#47ABFF;
+	color: #47ABFF;
 }
 
-a:hover {
-	color:#47ABFF;
+a: hover {
+	color: #47ABFF;
 }
 
 th,
 td {
-	text-align:left;
+	text-align: left;
 	font-size: 0.9em;
-	padding:0 4px;
+	padding: 0 4px;
 }
 
-.result td:first-child {
+.result td: first-child {
 	width: 82px;
 }
 
-.result td:last-child {
+.result td: last-child {
 	width: 70px
 }
 
 input {
-	padding:0 6px;
-	background-color:#FFFFFF;
-  border:0;
-  height:28px;
+	padding: 0 6px;
+	background-color: #FFFFFF;
+  border: 0;
+  height: 28px;
 }
 
 select {
-	padding:5px;
-    border:0;
-    background:#FFFFFF;
-    height:28px;
-    border:0;
-    border-radius:0;
-    width:50px;
-    -webkit-appearance:none;
+	padding: 5px;
+    border: 0;
+    background: #FFFFFF;
+    height: 28px;
+    border: 0;
+    border-radius: 0;
+    width: 50px;
+    -webkit-appearance: none;
 }
 
 .submit {
-	background-color:#47ABFF;
-	width:220px;
+	background-color: #7BC3FF;
+	width: 220px;
 }
 
 .searchform {
-	text-align:center;
+	text-align: center;
 }
 
 .searchresults {
-	margin-top:20px;
-	display:none;
+	margin-top: 20px;
+	display: none;
 }
 
 .resultdetail p {
@@ -104,21 +107,13 @@ select {
 }
 
 .resultdetail {
-	display:none;
+	display: none;
 }
 
 .notfound {
-	display:none;
+	display: none;
 }
 
-.top {
-
-}
-
-.left {
-
-}
-
-.right {
-
+.recent {
+	margin-top: 10px;
 }
