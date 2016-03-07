@@ -2,28 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Bummed is what you are when you go out to your car and it's been towed">
+    <meta name="author" content="Alex Knoll">
 
     <title>Where in Chicago is my Car?</title>
+
+    <!-- stylesheets -->
     <link href="normalize.css" rel="stylesheet">
     <link href="chicago-impound.css" rel="stylesheet">
 
-    <!-- JQuery -->
-    <script type="text/javascript"
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    </script>
-
-    <!-- Application JS -->
-    <script type="text/javascript"
-      src="chicago-impound.js">
-    </script>
+    <!-- js -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="chicago-impound.js"></script>
 
   </head>
 
   <body>
 
-    <article class="centered">
+    <div class="centered">
 
       <section class="top">
 
@@ -91,7 +87,7 @@
         </form>
       </section>
 
-      <section class="left">
+      <div class="left">
         <table class="searchresults">
           <tr>
             <th>Tow Date</th>
@@ -105,14 +101,14 @@
         </table>
         <div class="recent">Recently towed: </div>
         <div class="notfound"><p>Even the City of Chicago doesn't know where your car is!</p></div>
-      </section>
+      </div>
 
-      <section class="right">
+      <div class="right">
         <div class="resultdetail">
         </div>
-      </section>
+      </div>
 
-    </article>
+    </div>
 
   </body>
 
